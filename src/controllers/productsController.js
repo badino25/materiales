@@ -15,10 +15,9 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		index: (req, res) => {
 			const products = getJson();
 			res.render('products', {products,toThousand});
-	}},
+	},
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
@@ -36,6 +35,7 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		const products = getJson();
+		const file = req.file;
 		const {name,price,discount,category,description} = req.body;
 		const nuevaId = Date.now();
 		let ObjetoCreado = {
@@ -45,7 +45,8 @@ const controller = {
 			discount: +discount,
 			category,
 			description:description.trim(),
-			image: 'default-image.png'
+			image:file ? file.filename : 'default-image.png'
+
 		}
 		products.push(ObjetoCreado);
 		console.log(products);
