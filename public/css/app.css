@@ -460,3 +460,134 @@ textarea.form-input {
     margin: auto;
   }
 }
+
+
+/*Register*/
+
+
+.main-reg-caja{
+  padding: 10px;
+  text-align: center;
+}
+.main-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(225, 227, 231);
+}
+.h1_register{
+  margin: 15px 0;
+  font-weight: bolder;
+}
+.articulo_registro_main{
+  margin: 15px 0;
+}
+.imput_register{
+  width: 95%;
+  height: 30px;
+  border: 1px solid var(--color-grisClaro);
+  border-radius: 5px;
+}
+.btn_enviar_registro{
+  width: 20%;
+  height: 40px;
+  background-color: var(--color-celeste);
+  color: var(--color-blanco);
+  border: 1px solid var(--color-celeste);
+  border-radius: 5px;
+    }
+
+.btn_reset_registro{
+  width: 20%;
+  height: 40px;
+  background-color: var(--color-celeste);
+  color: var(--color-blanco);
+  border: 1px solid var(--color-celeste);
+  border-radius: 5px;
+}
+.articulo_login_main div{
+display: flex;
+  justify-content:start ;
+}
+
+@media(min-width: 768px){
+  .main_registro{
+      text-align: center;
+  }
+  .imput_register{
+      width: 50%;
+      height: 35px;
+  }
+}
+
+@media  (min-width: 1024px){
+  .imput_register{
+      width: 35%;
+      height: 35px;
+  }
+}
+
+/* logi*/ 
+
+.main-login-caja{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+  background-color: rgb(225, 227, 231);
+}
+.articulo-login{
+  padding: 18px;
+}
+
+.input-log{
+ 
+  width: 95%;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.boton-enviar{
+  width: 60%;
+  height: 30px;
+  background-color: var(--Celeste);
+  color: var(--blanco);
+  border: 1px solid var(--Celeste);
+  border-radius: 5px;
+  transition: background-color 2seg;
+}
+@media(min-width: 768px){
+  .input-log{
+      width: 60%;
+      height: 35px;
+  }
+  .main-login-caja{
+      padding: 13px;
+  }
+  .boton-enviar:hover{
+      background-color: blue;
+  }
+}
+
+@media  (min-width: 1024px){
+  .articulo-login{
+      padding: 30px;
+  }
+  
+  .input-log{
+      height: 50px;
+      font-size: 19px;
+      font-weight: bold;
+  }
+
+  .boton-enviar{
+      width:60% ; 
+      height:50px ;
+      font-size: 22px;
+  }
+  
+}
+
+@media (min-width 1440px){
+  
+}

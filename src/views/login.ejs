@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavbar') %>
+    <!-- /Header -->
+
+<main class="main-login-caja">
+    <form action="/login" method="post">
+        <section>
+            <article class="articulo-login">
+                <label for="usuario"></label>
+                <input class="input-log" type="email" placeholder="Nombre de usuario o e-mail" required>
+            </article>
+            <article class="articulo-login">
+                <button class="boton-enviar" type="submit">Enviar</button>
+            </article>
+        </section>
+    </form>
+</main>
+
+<!-- footer -->
+<%- include('partials/footer') %>
+<!-- /footer -->
+</body>
+</html>

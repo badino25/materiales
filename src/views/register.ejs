@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavbar') %>
+    <!-- /Header -->
+
+<main class="main-reg-caja">
+    <form  class="main-form" accion="/register" method="post">
+            <section>
+                <h4 class="h1_register">Datos Personales</h4>
+                <article class="articulo_registro_main">
+                    <label for="nombre"></label>
+                    <input class="imput_register" type="text" name="nombre" id="nombre" placeholder="Ingresa nombre" required="Error" validationMessage="numeros no" value = "<%= locals.old && old.nombre %> ">
+                    <p><%= locals.error && error.nombre ? error.nombre.msg : null %></p>
+                </article>
+                <article class="articulo_registro_main">
+                    <label for="nombre de usuario"></label>
+                    <input class="imput_register" type="text" name="apellido" id="usuario" placeholder="Ingresa apellido" value = "<%= locals.old && old.apellido %> ">
+                    <p><%= locals.error && error.apellido ? error.apellido.msg : null %></p>
+                </article>
+                <article class="articulo_registro_main">
+                    <label for="email"></label>
+                    <input class="imput_register" type="email" name="email" id="email" placeholder="Ingresa tu email" value = "<%= locals.old && old.email %> " >
+                    <p><%= locals.error && error.email ? error.email.msg : null %></p>
+                </article>
+            </section>
+            <section>
+                <article class="articulo_registro_main">
+                    <h4 class="h1_register">Seguridad</h4>
+                    <label for="contraseña"></label>
+                    <input class="imput_register" type="password" name="contraseña" id="contraseña" placeholder="Ingresa contraseña" value = "<%= locals.old && old.contraseña %> ">
+                    <p><%= locals.error && error.contraseña ? error.contraseña.msg : null %></p>
+                </article>
+                
+            </section>
+                <article class="articulo_registro_main">
+                    <button class="btn_enviar_registro" type="submit">REGISTRAR</button>
+                    <button type="reset" class="btn_reset_registro">BORRAR</button>
+                </article>
+        </form>
+    </main>
+
+        <!-- footer -->
+        <%- include('partials/footer') %>
+        <!-- /footer -->
+    </body>
+    </html>
